@@ -13,7 +13,11 @@ public class Main {
 //        System.out.println(numbers.length);
 //        System.out.println(Arrays.toString(numbers));
 
-        Array array = new Array(3);
-        array.print();
+        Array numbers = new Array(3);
+        numbers.insert(10);
+        numbers.insert(20);
+        numbers.insert(30);
+        numbers.insert(40);
+        numbers.print();
     }
 }
