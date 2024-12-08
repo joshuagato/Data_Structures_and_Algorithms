@@ -19,6 +19,8 @@ public class Main {
         numbers.insert(30);
         numbers.insert(40);
         numbers.removeAt(1);
+        System.out.println("Index of {10}: " + numbers.indexOf(10));
+        System.out.println("Index of {100}: " + numbers.indexOf(100));
         numbers.print();
     }
 }
