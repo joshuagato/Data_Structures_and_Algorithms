@@ -58,14 +58,13 @@ public class LinkedList {
         if (isEmpty())
             throw new NoSuchElementException();
 
-        if (first == last) {
+        if (isOnlyOneItem()) {
             first = last = null;
-            return;
+        } else {
+            var second = first.next;
+            first.next = null;
+            first = second;
         }
-
-        var second = first.next;
-        first.next = null;
-        first = second;
 
         size--;
     }
@@ -74,14 +73,13 @@ public class LinkedList {
         if (isEmpty())
             throw new NoSuchElementException();
 
-        if (last == first) {
+        if (isOnlyOneItem()) {
             last = first = null;
-            return;
+        } else {
+            last = getPrevious(last);
+            assert last != null;
+            last.next = null;
         }
-
-        last = getPrevious(last);
-        assert last != null;
-        last.next = null;
 
         size--;
     }
@@ -105,5 +103,9 @@ public class LinkedList {
 
     private boolean isEmpty() {
         return first == null;
+    }
+
+    private boolean isOnlyOneItem() {
+        return first == last;
     }
 }
