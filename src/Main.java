@@ -78,5 +78,9 @@ public class Main {
         System.out.println("indexOf: " + list.indexOf(30));
         System.out.println("contains: " + list.contains(30));
         System.out.println("contains: " + list.contains(40));
+
+        var array = list.toArray();
+
+        System.out.println(Arrays.toString(array));
     }
 }
