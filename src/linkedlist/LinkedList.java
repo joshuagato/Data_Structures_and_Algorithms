@@ -15,6 +15,7 @@ public class LinkedList {
 
     private Node first;
     private Node last;
+    private int size;
 
     public void addLast(int item) {
         var node = new Node(item);
@@ -25,6 +26,8 @@ public class LinkedList {
             last.next = node;
             last = node;
         }
+
+        size++;
     }
 
     public void addFirst(int item) {
@@ -36,6 +39,8 @@ public class LinkedList {
             node.next = first;
             first = node;
         }
+
+        size++;
     }
 
     public int indexOf(int item) {
@@ -61,6 +66,8 @@ public class LinkedList {
         var second = first.next;
         first.next = null;
         first = second;
+
+        size--;
     }
 
     public void removeLast() {
@@ -75,6 +82,8 @@ public class LinkedList {
         last = getPrevious(last);
         assert last != null;
         last.next = null;
+
+        size--;
     }
 
     private Node getPrevious(Node node) {
@@ -84,6 +93,10 @@ public class LinkedList {
             current = current.next;
         }
         return null;
+    }
+
+    public int size() {
+        return size;
     }
 
     public boolean contains(int item) {

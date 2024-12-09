@@ -66,13 +66,17 @@ public class Main {
 //        System.out.println(list);
 
         var list = new LinkedList();
+        System.out.println("size: " + list.size());
         list.addLast(20);
+        System.out.println("size: " + list.size());
         list.addLast(30);
+        list.addLast(40);
         list.addFirst(10);
         list.removeFirst();
         list.removeLast();
-        System.out.println(list.indexOf(30));
-        System.out.println(list.contains(30));
-        System.out.println(list.contains(40));
+        System.out.println("size: " + list.size());
+        System.out.println("indexOf: " + list.indexOf(30));
+        System.out.println("contains: " + list.contains(30));
+        System.out.println("contains: " + list.contains(40));
     }
 }
