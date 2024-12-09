@@ -70,5 +70,7 @@ public class Main {
         list.addLast(30);
         list.addFirst(10);
         System.out.println(list.indexOf(30));
+        System.out.println(list.contains(30));
+        System.out.println(list.contains(40));
     }
 }
