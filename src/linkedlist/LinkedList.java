@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.util.NoSuchElementException;
+
 public class LinkedList {
 
     private class Node {
@@ -45,6 +47,20 @@ public class LinkedList {
             index++;
         }
         return -1;
+    }
+
+    public void removeFirst() {
+        if (isEmpty())
+            throw new NoSuchElementException();
+
+        if (first == last) {
+            first = last = null;
+            return;
+        }
+
+        var second = first.next;
+        first.next = null;
+        first = second;
     }
 
     public boolean contains(int item) {
