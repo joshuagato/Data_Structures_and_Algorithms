@@ -69,5 +69,6 @@ public class Main {
         list.addLast(20);
         list.addLast(30);
         list.addFirst(10);
+        System.out.println(list.indexOf(30));
     }
 }
