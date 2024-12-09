@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 
 import arrays.Array;
+import linkedlist.LinkedList;
 
 
 public class Main {
@@ -45,24 +45,29 @@ public class Main {
 //        System.out.println(list);
 
         // Java's inbuilt LinkedList
-        LinkedList<Integer> list = new LinkedList<>();
-        list.add(20);
+//        LinkedList<Integer> list = new LinkedList<>();
+//        list.add(20);
+//        list.addLast(30);
+//        list.addLast(40);
+//        list.addLast(40);
+//        list.addFirst(10);
+//        list.addFirst(10);
+//        list.remove(2);
+//        list.removeFirst();
+//        list.removeLast();
+//
+//        System.out.println(list.contains(20));
+//        System.out.println(list.indexOf(20));
+//        System.out.println(list.lastIndexOf(30));
+//        System.out.println(list.size());
+//
+//        System.out.println(Arrays.toString(list.toArray()));
+
+//        System.out.println(list);
+
+        var list = new LinkedList();
+        list.addLast(20);
         list.addLast(30);
-        list.addLast(40);
-        list.addLast(40);
         list.addFirst(10);
-        list.addFirst(10);
-        list.remove(2);
-        list.removeFirst();
-        list.removeLast();
-
-        System.out.println(list.contains(20));
-        System.out.println(list.indexOf(20));
-        System.out.println(list.lastIndexOf(30));
-        System.out.println(list.size());
-
-        System.out.println(Arrays.toString(list.toArray()));
-
-        System.out.println(list);
     }
 }
