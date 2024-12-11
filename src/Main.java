@@ -72,6 +72,7 @@ public class Main {
         list.addLast(30);
         list.addLast(40);
         list.addFirst(10);
+        list.addFirst(0);
         list.removeFirst();
         list.removeLast();
         System.out.println("size: " + list.size());
@@ -80,7 +81,11 @@ public class Main {
         System.out.println("contains: " + list.contains(40));
 
         var array = list.toArray();
-
         System.out.println(Arrays.toString(array));
+
+        list.reverse();
+        var reversed = list.toArray();
+        System.out.println(Arrays.toString(reversed));
+
     }
 }
