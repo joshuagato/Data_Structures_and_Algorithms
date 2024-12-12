@@ -75,6 +75,8 @@ public class Main {
         list.addFirst(0);
         list.removeFirst();
         list.removeLast();
+        list.addLast(40);
+        list.addLast(50);
         System.out.println("size: " + list.size());
         System.out.println("indexOf: " + list.indexOf(30));
         System.out.println("contains: " + list.contains(30));
@@ -86,6 +88,8 @@ public class Main {
         list.reverse();
         var reversed = list.toArray();
         System.out.println(Arrays.toString(reversed));
+
+        System.out.println("getKthFromTheEnd: " + list.getKthFromTheEnd(3));
 
     }
 }
