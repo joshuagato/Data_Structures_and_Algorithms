@@ -4,6 +4,7 @@ import java.util.Stack;
 
 import arrays.Array;
 import linkedlist.LinkedList;
+import stacks.Expression;
 import stacks.StringReverser;
 
 
@@ -95,25 +96,43 @@ public class Main {
 //        System.out.println("getKthFromTheEnd: " + list.getKthFromTheEnd(3));
 
         // Java's inbuilt Stack class
-        Stack<Integer> stack = new Stack<>();
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
+//        Stack<Integer> stack = new Stack<>();
+//        stack.push(10);
+//        stack.push(20);
+//        stack.push(30);
+//
+//        System.out.println(stack);
+//
+//        var top = stack.pop();
+//        System.out.println(top);
+//
+//        System.out.println(stack);
+//
+//        top = stack.peek();
+//        System.out.println(top);
+//
+//        String str = "abcd";
+//        System.out.println("str: " + str);
+//        StringReverser reverser = new StringReverser();
+//        var reversed = reverser.reverse(str);
+//        System.out.println("rev: " + reversed);
 
-        System.out.println(stack);
 
-        var top = stack.pop();
-        System.out.println(top);
+        // Balanced expression checker
+        // Edge cases: (,     ((),     (],     )(
+        String str = "(1 + 2)";
+        String str2 = "(1 + 2";
+        String str3 = "((1 + 2)";
+        String str4 = "(1 + 2]";
+        String str5 = ")1 + 2(";
+        Expression expression = new Expression();
+        var result = expression.isBalanced(str);
+        System.out.println(result);
 
-        System.out.println(stack);
-
-        top = stack.peek();
-        System.out.println(top);
-
-        String str = "abcd";
-        System.out.println("str: " + str);
-        StringReverser reverser = new StringReverser();
-        var reversed = reverser.reverse(str);
-        System.out.println("rev: " + reversed);
+        System.out.println("str: " + expression.isBalanced(str));
+        System.out.println("str2: " + expression.isBalanced(str2));
+        System.out.println("str3: " + expression.isBalanced(str3));
+        System.out.println("str4: " + expression.isBalanced(str4));
+        System.out.println("str5: " + expression.isBalanced(str5));
     }
 }
