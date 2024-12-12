@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Stack;
 
 import arrays.Array;
 import linkedlist.LinkedList;
@@ -92,5 +93,20 @@ public class Main {
 //
 //        System.out.println("getKthFromTheEnd: " + list.getKthFromTheEnd(3));
 
+        // Java's inbuilt Stack class
+        Stack<Integer> stack = new Stack<>();
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+
+        System.out.println(stack);
+
+        var top = stack.pop();
+        System.out.println(top);
+
+        System.out.println(stack);
+
+        top = stack.peek();
+        System.out.println(top);
     }
 }
