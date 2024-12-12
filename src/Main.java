@@ -4,6 +4,7 @@ import java.util.Stack;
 
 import arrays.Array;
 import linkedlist.LinkedList;
+import stacks.StringReverser;
 
 
 public class Main {
@@ -108,5 +109,11 @@ public class Main {
 
         top = stack.peek();
         System.out.println(top);
+
+        String str = "abcd";
+        System.out.println("str: " + str);
+        StringReverser reverser = new StringReverser();
+        var reversed = reverser.reverse(str);
+        System.out.println("rev: " + reversed);
     }
 }
