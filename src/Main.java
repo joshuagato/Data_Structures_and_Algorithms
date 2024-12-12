@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Stack;
 
 import arrays.Array;
 import linkedlist.LinkedList;
 import stacks.Expression;
+import stacks.Stack;
 import stacks.StringReverser;
 
 
@@ -120,19 +120,35 @@ public class Main {
 
         // Balanced expression checker
         // Edge cases: (,     ((),     (],     )(
-        String str = "(1 + 2)";
-        String str2 = "(1 + 2";
-        String str3 = "((1 + 2)";
-        String str4 = "(1 + 2]";
-        String str5 = ")1 + 2(";
-        Expression expression = new Expression();
-        var result = expression.isBalanced(str);
-        System.out.println(result);
+//        String str = "(1 + 2)";
+//        String str2 = "(1 + 2";
+//        String str3 = "((1 + 2)";
+//        String str4 = "(1 + 2]";
+//        String str5 = ")1 + 2(";
+//        Expression expression = new Expression();
+//        var result = expression.isBalanced(str);
+//        System.out.println(result);
+//
+//        System.out.println("str: " + expression.isBalanced(str));
+//        System.out.println("str2: " + expression.isBalanced(str2));
+//        System.out.println("str3: " + expression.isBalanced(str3));
+//        System.out.println("str4: " + expression.isBalanced(str4));
+//        System.out.println("str5: " + expression.isBalanced(str5));
 
-        System.out.println("str: " + expression.isBalanced(str));
-        System.out.println("str2: " + expression.isBalanced(str2));
-        System.out.println("str3: " + expression.isBalanced(str3));
-        System.out.println("str4: " + expression.isBalanced(str4));
-        System.out.println("str5: " + expression.isBalanced(str5));
+        // Our Stack class using arrays
+        Stack stack = new Stack();
+        System.out.println("isEmpty: " + stack.isEmpty());
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        stack.push(40);
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack);
+        System.out.println("peek: " + stack.peek());
+        stack.push(50);
+        System.out.println(stack);
+        System.out.println("peek: " + stack.peek());
+        System.out.println("isEmpty: " + stack.isEmpty());
     }
 }
