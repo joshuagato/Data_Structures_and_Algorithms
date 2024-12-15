@@ -1,10 +1,8 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 import arrays.Array;
 import linkedlist.LinkedList;
 import stacks.Expression;
-import stacks.Stack;
 import stacks.StringReverser;
 
 
@@ -136,19 +134,40 @@ public class Main {
 //        System.out.println("str5: " + expression.isBalanced(str5));
 
         // Our Stack class using arrays
-        Stack stack = new Stack();
-        System.out.println("isEmpty: " + stack.isEmpty());
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
-        stack.push(40);
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack);
-        System.out.println("peek: " + stack.peek());
-        stack.push(50);
-        System.out.println(stack);
-        System.out.println("peek: " + stack.peek());
-        System.out.println("isEmpty: " + stack.isEmpty());
+//        Stack stack = new Stack();
+//        System.out.println("isEmpty: " + stack.isEmpty());
+//        stack.push(10);
+//        stack.push(20);
+//        stack.push(30);
+//        stack.push(40);
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+//        System.out.println(stack);
+//        System.out.println("peek: " + stack.peek());
+//        stack.push(50);
+//        System.out.println(stack);
+//        System.out.println("peek: " + stack.peek());
+//        System.out.println("isEmpty: " + stack.isEmpty());
+
+        // Java's implementation of Queues
+        Queue<Integer> queue = new ArrayDeque<>();
+        queue.add(10);
+        queue.add(10);
+        queue.add(20);
+        queue.add(30);
+        System.out.println("queue: " + queue);
+        var front = queue.remove();
+        System.out.println("front: " + front);
+        reverse(queue);
+        System.out.println("reverse: " + queue);
+    }
+
+    public static void reverse(Queue<Integer> queue) {
+        Stack<Integer> stack = new Stack<>();
+        while (!queue.isEmpty())
+            stack.push(queue.remove());
+
+        while (!stack.isEmpty())
+            queue.add(stack.pop());
     }
 }
