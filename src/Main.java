@@ -3,6 +3,7 @@ import java.util.*;
 import arrays.Array;
 import linkedlist.LinkedList;
 import queues.ArrayQueue;
+import queues.QueueWithTwoStacks;
 import stacks.Expression;
 import stacks.StringReverser;
 
@@ -163,24 +164,33 @@ public class Main {
 //        System.out.println("reverse: " + queue);
 
         // Our Queue class implementation
-        ArrayQueue queue = new ArrayQueue(5);
+//        ArrayQueue queue = new ArrayQueue(5);
+//        queue.enqueue(10);
+//        queue.enqueue(20);
+//        queue.enqueue(30);
+//        queue.dequeue();
+//        queue.enqueue(40);
+//        queue.enqueue(50);
+//        queue.enqueue(60);
+//
+//        var front = queue.dequeue();
+//        queue.enqueue(70);
+//
+//        System.out.println(front);
+//        System.out.println(queue);
+//
+//        System.out.println("isEmpty: " + queue.isEmpty());
+//        System.out.println("isFull: " + queue.isFull());
+//        System.out.println("peek: " + queue.peek());
+
+        // Our Queue with two stacks
+        QueueWithTwoStacks queue = new QueueWithTwoStacks();
         queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
-        queue.dequeue();
-        queue.enqueue(40);
-        queue.enqueue(50);
-        queue.enqueue(60);
-
-        var front = queue.dequeue();
-        queue.enqueue(70);
-
-        System.out.println(front);
-        System.out.println(queue);
-
-        System.out.println("isEmpty: " + queue.isEmpty());
-        System.out.println("isFull: " + queue.isFull());
-        System.out.println("peek: " + queue.peek());
+        var first = queue.dequeue();
+        System.out.println(first);
+        System.out.println("queue.peek(): " + queue.peek());
     }
 
     public static void reverse(Queue<Integer> queue) {
