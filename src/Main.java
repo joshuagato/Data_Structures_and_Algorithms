@@ -3,6 +3,7 @@ import java.util.*;
 import arrays.Array;
 import linkedlist.LinkedList;
 import queues.ArrayQueue;
+import queues.PriorityQueue;
 import queues.QueueWithTwoStacks;
 import stacks.Expression;
 import stacks.StringReverser;
@@ -193,13 +194,27 @@ public class Main {
 //        System.out.println("queue.peek(): " + queue.peek());
 
         // Java's Priority Queue Implementation
-        PriorityQueue<Integer> queue = new PriorityQueue<>();
+//        PriorityQueue<Integer> queue = new PriorityQueue<>();
+//        queue.add(5);
+//        queue.add(1);
+//        queue.add(3);
+//        queue.add(2);
+//        while (!queue.isEmpty())
+//            System.out.println(queue.remove());
+
+        // Our implementation of Priority Queues
+        PriorityQueue queue = new PriorityQueue();
         queue.add(5);
-        queue.add(1);
-        queue.add(3);
         queue.add(2);
-        while (!queue.isEmpty())
-            System.out.println(queue.remove());
+        queue.add(1);
+        queue.add(4);
+        queue.add(3);
+
+        System.out.println("queue: " + queue);
+        System.out.println("isEmpty: " + queue.isEmpty());
+        System.out.println("isFull: " + queue.isFull());
+        System.out.println("remove: " + queue.remove());
+        System.out.println("queue: " + queue);
     }
 
     public static void reverse(Queue<Integer> queue) {
