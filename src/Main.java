@@ -203,18 +203,41 @@ public class Main {
 //            System.out.println(queue.remove());
 
         // Our implementation of Priority Queues
-        PriorityQueue queue = new PriorityQueue();
-        queue.add(5);
-        queue.add(2);
-        queue.add(1);
-        queue.add(4);
-        queue.add(3);
+//        PriorityQueue queue = new PriorityQueue();
+//        queue.add(5);
+//        queue.add(2);
+//        queue.add(1);
+//        queue.add(4);
+//        queue.add(3);
+//
+//        System.out.println("queue: " + queue);
+//        System.out.println("isEmpty: " + queue.isEmpty());
+//        System.out.println("isFull: " + queue.isFull());
+//        System.out.println("remove: " + queue.remove());
+//        System.out.println("queue: " + queue);
 
-        System.out.println("queue: " + queue);
-        System.out.println("isEmpty: " + queue.isEmpty());
-        System.out.println("isFull: " + queue.isFull());
-        System.out.println("remove: " + queue.remove());
-        System.out.println("queue: " + queue);
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "Josh");
+        map.put(2, "John");
+        map.put(3, "Mary");
+        map.put(3, "Marianne");    // With duplicate keys
+        map.put(4, null);   // You can store null values in HashMaps
+        map.put(null, null);    // Works as well. Does it have a real world application? None that I can think of
+
+        map.remove(null);
+        System.out.println("get: " + map.get(3));
+        System.out.println("containsKey: " + map.containsKey(3));   // O(1)
+        System.out.println("containsKey: " + map.containsValue("Josh"));    // O(n)
+        System.out.println("map: " + map);
+
+        System.out.println();
+
+        for (var item : map.entrySet()) {
+            System.out.println(item);
+            System.out.println(item.getKey());
+//            System.out.println(item.getValue());
+//            System.out.println(item.setValue("Some value"));
+        }
     }
 
     public static void reverse(Queue<Integer> queue) {
