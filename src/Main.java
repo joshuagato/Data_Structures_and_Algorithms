@@ -184,13 +184,22 @@ public class Main {
 //        System.out.println("peek: " + queue.peek());
 
         // Our Queue with two stacks
-        QueueWithTwoStacks queue = new QueueWithTwoStacks();
-        queue.enqueue(10);
-        queue.enqueue(20);
-        queue.enqueue(30);
-        var first = queue.dequeue();
-        System.out.println(first);
-        System.out.println("queue.peek(): " + queue.peek());
+//        QueueWithTwoStacks queue = new QueueWithTwoStacks();
+//        queue.enqueue(10);
+//        queue.enqueue(20);
+//        queue.enqueue(30);
+//        var first = queue.dequeue();
+//        System.out.println(first);
+//        System.out.println("queue.peek(): " + queue.peek());
+
+        // Java's Priority Queue Implementation
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
+        queue.add(5);
+        queue.add(1);
+        queue.add(3);
+        queue.add(2);
+        while (!queue.isEmpty())
+            System.out.println(queue.remove());
     }
 
     public static void reverse(Queue<Integer> queue) {
