@@ -1,6 +1,7 @@
 import java.util.*;
 
 import arrays.Array;
+import hashtables.CharFinder;
 import linkedlist.LinkedList;
 import queues.ArrayQueue;
 import queues.PriorityQueue;
@@ -216,28 +217,32 @@ public class Main {
 //        System.out.println("remove: " + queue.remove());
 //        System.out.println("queue: " + queue);
 
-        Map<Integer, String> map = new HashMap<>();
-        map.put(1, "Josh");
-        map.put(2, "John");
-        map.put(3, "Mary");
-        map.put(3, "Marianne");    // With duplicate keys
-        map.put(4, null);   // You can store null values in HashMaps
-        map.put(null, null);    // Works as well. Does it have a real world application? None that I can think of
+////        Map<Integer, String> map = new HashMap<>();
+////        map.put(1, "Josh");
+////        map.put(2, "John");
+////        map.put(3, "Mary");
+////        map.put(3, "Marianne");    // With duplicate keys
+////        map.put(4, null);   // You can store null values in HashMaps
+////        map.put(null, null);    // Works as well. Does it have a real world application? None that I can think of
+////
+////        map.remove(null);
+////        System.out.println("get: " + map.get(3));
+////        System.out.println("containsKey: " + map.containsKey(3));   // O(1)
+////        System.out.println("containsKey: " + map.containsValue("Josh"));    // O(n)
+////        System.out.println("map: " + map);
+////
+////        System.out.println();
+////
+////        for (var item : map.entrySet()) {
+////            System.out.println(item);
+////            System.out.println(item.getKey());
+//////            System.out.println(item.getValue());
+//////            System.out.println(item.setValue("Some value"));
+//        }
 
-        map.remove(null);
-        System.out.println("get: " + map.get(3));
-        System.out.println("containsKey: " + map.containsKey(3));   // O(1)
-        System.out.println("containsKey: " + map.containsValue("Josh"));    // O(n)
-        System.out.println("map: " + map);
-
-        System.out.println();
-
-        for (var item : map.entrySet()) {
-            System.out.println(item);
-            System.out.println(item.getKey());
-//            System.out.println(item.getValue());
-//            System.out.println(item.setValue("Some value"));
-        }
+        CharFinder finder = new CharFinder();
+        var ch = finder.findFirstNonRepeatingChar("a green apple");
+        System.out.println("ch: " + ch);
     }
 
     public static void reverse(Queue<Integer> queue) {
