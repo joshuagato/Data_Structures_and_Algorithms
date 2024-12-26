@@ -240,9 +240,19 @@ public class Main {
 //////            System.out.println(item.setValue("Some value"));
 //        }
 
+        // Our char finder implementation
         CharFinder finder = new CharFinder();
         var ch = finder.findFirstNonRepeatingChar("a green apple");
-        System.out.println("ch: " + ch);
+        System.out.println("findFirstNonRepeatingChar: " + ch);
+        ch = finder.findFirstRepeatingChar("a green apple");
+        System.out.println("findFirstRepeatingChar: " + ch);
+
+        // Java's set implementation
+        Set<Integer> set = new HashSet<>();
+        int[] numbers = {1, 2, 3, 3, 2, 1, 4, 5};
+        for (var number : numbers)
+            set.add(number);
+        System.out.println("set: " + set);
     }
 
     public static void reverse(Queue<Integer> queue) {
