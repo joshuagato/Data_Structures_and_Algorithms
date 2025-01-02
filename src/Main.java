@@ -241,18 +241,31 @@ public class Main {
 //        }
 
         // Our char finder implementation
-        CharFinder finder = new CharFinder();
-        var ch = finder.findFirstNonRepeatingChar("a green apple");
-        System.out.println("findFirstNonRepeatingChar: " + ch);
-        ch = finder.findFirstRepeatingChar("a green apple");
-        System.out.println("findFirstRepeatingChar: " + ch);
+//        CharFinder finder = new CharFinder();
+//        var ch = finder.findFirstNonRepeatingChar("a green apple");
+//        System.out.println("findFirstNonRepeatingChar: " + ch);
+//        ch = finder.findFirstRepeatingChar("a green apple");
+//        System.out.println("findFirstRepeatingChar: " + ch);
 
         // Java's set implementation
-        Set<Integer> set = new HashSet<>();
-        int[] numbers = {1, 2, 3, 3, 2, 1, 4, 5};
-        for (var number : numbers)
-            set.add(number);
-        System.out.println("set: " + set);
+//        Set<Integer> set = new HashSet<>();
+//        int[] numbers = {1, 2, 3, 3, 2, 1, 4, 5};
+//        for (var number : numbers)
+//            set.add(number);
+//        System.out.println("set: " + set);
+
+        Map<String, String> map = new HashMap<>();
+        map.put("123456-A", "Mosh");
+        System.out.println(hash("123456-A"));
+    }
+
+    // Our custom hash function
+    public static int hash (String key) {
+        int hash = 0;
+        for (var ch: key.toCharArray())
+            hash += ch;
+
+        return hash % 100;
     }
 
     public static void reverse(Queue<Integer> queue) {
