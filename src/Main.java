@@ -2,6 +2,7 @@ import java.util.*;
 
 import arrays.Array;
 import hashtables.CharFinder;
+import hashtables.HashTable;
 import linkedlist.LinkedList;
 import queues.ArrayQueue;
 import queues.PriorityQueue;
@@ -254,9 +255,24 @@ public class Main {
 //            set.add(number);
 //        System.out.println("set: " + set);
 
-        Map<String, String> map = new HashMap<>();
-        map.put("123456-A", "Mosh");
-        System.out.println(hash("123456-A"));
+        // Java's Hash Table implementation
+//        Map<String, String> map = new HashMap<>();
+//        map.put("123456-A", "Mosh");
+//        System.out.println(hash("123456-A"));
+
+        // Our Hash Table implementation
+        HashTable table = new HashTable();
+        table.put(6, "A");
+        table.put(8, "B");
+        table.put(11, "C");
+        table.put(6, "A+");
+
+        System.out.println("Done...");
+        System.out.println("table: " + table);
+        System.out.println("table.get: " + table.get(6));
+        System.out.println("table.get: " + table.get(20));
+        table.remove(6);
+        System.out.println("table.get: " + table.get(6));
     }
 
     // Our custom hash function
