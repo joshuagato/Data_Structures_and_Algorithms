@@ -1,4 +1,4 @@
-package arrays;
+package liner.arrays;
 
 public class Array {
     private int[] items;

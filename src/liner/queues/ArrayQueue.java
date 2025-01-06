@@ -1,4 +1,4 @@
-package queues;
+package liner.queues;
 
 import java.util.Arrays;
 

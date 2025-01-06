@@ -1,4 +1,4 @@
-package hashtables;
+package liner.hashtables;
 
 import java.util.HashMap;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package hashtables;
+package liner.hashtables;
 
 import java.util.LinkedList;
 
@@ -22,6 +22,8 @@ public class HashTable {
             return;
         }
 
+//        System.out.println("getOrCreateBucket(key): " + getOrCreateBucket(key));
+
         getOrCreateBucket(key).add(new Entry(key, value));
     }
 
@@ -42,10 +44,11 @@ public class HashTable {
 
     private LinkedList<Entry> getOrCreateBucket(int key) {
         var index = hash(key);
-        var bucket = entries[index];
-        if (bucket == null) entries[index] = new LinkedList<>();
+        if (entries[index] == null) {
+            entries[index] = new LinkedList<>();
+        }
 
-        return bucket;
+        return entries[index];
     }
 
     private Entry getEntry(int key) {

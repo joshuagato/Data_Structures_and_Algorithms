@@ -1,4 +1,4 @@
-package linkedlist;
+package liner.linkedlist;
 
 import java.util.NoSuchElementException;
 

@@ -1,4 +1,4 @@
-package stacks;
+package liner.stacks;
 
 import java.util.Arrays;
 
