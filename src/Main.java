@@ -1,14 +1,15 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.Stack;
+import java.util.Queue;
+import java.util.PriorityQueue;
 
-import arrays.Array;
-import hashtables.CharFinder;
-import hashtables.HashTable;
-import linkedlist.LinkedList;
-import queues.ArrayQueue;
-import queues.PriorityQueue;
-import queues.QueueWithTwoStacks;
-import stacks.Expression;
-import stacks.StringReverser;
+import liner.arrays.*;
+import liner.linkedlist.*;
+import liner.stacks.*;
+import liner.queues.*;
+import liner.hashtables.*;
 
 
 public class Main {
@@ -68,7 +69,7 @@ public class Main {
 //        System.out.println(list.size());
 //
 //        System.out.println(Arrays.toString(list.toArray()));
-
+//
 //        System.out.println(list);
 
         // Our LinkedList class
@@ -138,7 +139,7 @@ public class Main {
 //        System.out.println("str4: " + expression.isBalanced(str4));
 //        System.out.println("str5: " + expression.isBalanced(str5));
 
-        // Our Stack class using arrays
+        // Our Stack class using liner.arrays
 //        Stack stack = new Stack();
 //        System.out.println("isEmpty: " + stack.isEmpty());
 //        stack.push(10);
